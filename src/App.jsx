@@ -7,7 +7,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Homepage />} />
+        <Route path="/ACES-MHS" element={<Homepage />} />
+        
         {/* <Route path="trivia" element={<TriviaPage />} /> */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
