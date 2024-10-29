@@ -2,6 +2,10 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Team from "../assets/team1.png";
+import Sandra from "../assets/sandra.png";
+import Peter from "../assets/peter.png";
+import Catherine from "../assets/catherine.png";
+import Inuifak from "../assets/inuifak.png";
 
 function MTT() {
   const responsive = {
@@ -23,10 +27,13 @@ function MTT() {
   };
 
   const teamMembers = [
-    { name: "John Doe", position: "Software Engineer", image: Team },
-    { name: "Jane Smith", position: "Product Designer", image: Team },
-    { name: "Alice Johnson", position: "Project Manager", image: Team },
-    { name: "Bob Brown", position: "Data Scientist", image: Team },
+    
+    { name: "John Deo", position: "Lead Designer", image: Team },
+    { name: "Sandra", position: "Writer", image: Sandra },
+    { name: "Peter", position: "Designer 2", image: Peter },
+    { name: "Catherine", position: "Writer", image: Catherine },
+    { name: "Inuifak", position: "ACES DOW", image: Inuifak },
+    // Add more team members as needed...
   ];
 
   return (
