@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import PageNav from "../components/PageNav";
 import MTT from "../components/MTT";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Homepage() {
   return (
@@ -34,21 +34,31 @@ function Homepage() {
           Take a trivia quiz
         </h2>
         <ul className="flex flex-col lg:flex-row lg:flex-wrap justify-center gap-4 mx-auto w-3/4 max-w-2xl">
-          <li className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition-transform duration-200 cursor-pointer text-center">
-            ADHD
-          </li>
-          <li className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition-transform duration-200 cursor-pointer text-center">
-            Anxiety
-          </li>
-          <li className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition-transform duration-200 cursor-pointer text-center">
-            Bipolar
-          </li>
-          <li className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition-transform duration-200 cursor-pointer text-center">
-            Depression
-          </li>
-          <li className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition-transform duration-200 cursor-pointer text-center">
-            PTSD
-          </li>
+          <Link to="/ACES-MHS/adhd">
+            <li className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition-transform duration-200 cursor-pointer text-center">
+              ADHD
+            </li>
+          </Link>
+          <Link to="/ACES-MHS/anxiety">
+            <li className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition-transform duration-200 cursor-pointer text-center">
+              Anxiety
+            </li>
+          </Link>
+          <Link to="/ACES-MHS/bipolar">
+            <li className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition-transform duration-200 cursor-pointer text-center">
+              Bipolar
+            </li>
+          </Link>
+          <Link to="/ACES-MHS/depression">
+            <li className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition-transform duration-200 cursor-pointer text-center">
+              Depression
+            </li>
+          </Link>
+          <Link to="/ACES-MHS/ptsd">
+            <li className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition-transform duration-200 cursor-pointer text-center">
+              PTSD
+            </li>
+          </Link>
         </ul>
       </section>
 
