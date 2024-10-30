@@ -29,12 +29,11 @@ function MTT() {
 
   const teamMembers = [
     
-    
-    { name: "Sandra", position: "MHS Writer", image: Sandra },
+    { name: "Catherine", position: "MHS Writer ", image: Catherine },
     { name: "John Deo", position: "MHS Designer", image: Team },
     { name: "Peter", position: "MHS Designer", image: Peter },
     { name: "Eva", position: "ACES Vice President", image: Eva }, 
-    { name: "Catherine", position: "ACES Asst. SEC GEN ", image: Catherine },
+    { name: "Sandra", position: "ACES Asst. SEC GEN ", image: Sandra },
     { name: "Inuifak", position: "ACES Director of Welfare", image: Inuifak },
 
   ];
