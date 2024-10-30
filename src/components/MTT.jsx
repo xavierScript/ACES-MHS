@@ -6,6 +6,7 @@ import Sandra from "../assets/sandra.png";
 import Peter from "../assets/peter.png";
 import Catherine from "../assets/catherine.png";
 import Inuifak from "../assets/inuifak.png";
+import Eva from "../assets/eva.png"
 
 function MTT() {
   const responsive = {
@@ -28,12 +29,14 @@ function MTT() {
 
   const teamMembers = [
     
-    { name: "John Deo", position: "Lead Designer", image: Team },
-    { name: "Sandra", position: "Writer", image: Sandra },
-    { name: "Peter", position: "Designer 2", image: Peter },
-    { name: "Catherine", position: "Writer", image: Catherine },
-    { name: "Inuifak", position: "ACES DOW", image: Inuifak },
-    // Add more team members as needed...
+    
+    { name: "Sandra", position: "MHS Writer", image: Sandra },
+    { name: "John Deo", position: "MHS Designer", image: Team },
+    { name: "Peter", position: "MHS Designer", image: Peter },
+    { name: "Eva", position: "ACES Vice President", image: Eva }, 
+    { name: "Catherine", position: "ACES Asst. SEC GEN ", image: Catherine },
+    { name: "Inuifak", position: "ACES Director of Welfare", image: Inuifak },
+
   ];
 
   return (
