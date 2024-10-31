@@ -158,7 +158,7 @@ const ADHD = () => {
         <div className="w-9/12 h-fit mb-6">
           <button
             onClick={() => setIsKnowledgeBoardOpen(!isKnowledgeBoardOpen)}
-            className="w-full bg-blue-600 text-white rounded-t-3xl p-4 flex items-center justify-between hover:bg-blue-700 transition-colors duration-200"
+            className="w-full bg-blue-600 text-white rounded-t-3xl p-4 flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
           >
             <div className="flex items-center">
               <div className="bg-blue-800 text-white text-sm inline-flex items-center justify-center px-2 py-1 rounded-full">
@@ -166,9 +166,9 @@ const ADHD = () => {
               </div>
             </div>
             {isKnowledgeBoardOpen ? (
-              <ChevronUp className="w-5 h-5" />
+              <ChevronUp className="w-5 h-5 justify-end" />
             ) : (
-              <ChevronDown className="w-5 h-5" />
+              <ChevronDown className="w-5 h-5 justify-end" />
             )}
           </button>
           
