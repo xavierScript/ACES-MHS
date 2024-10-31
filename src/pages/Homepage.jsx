@@ -59,6 +59,11 @@ function Homepage() {
               PTSD
             </li>
           </Link>
+          <Link to="/ACES-MHS/trivia">
+            <li className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition-transform duration-200 cursor-pointer text-center">
+              Trivia
+            </li>
+          </Link>
         </ul>
       </section>
 
