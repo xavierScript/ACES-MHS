@@ -136,7 +136,7 @@ const TriviaPage = () => {
       setSelectedAnswer(answers[currentQuestionIndex + 1] || null);
       setFeedback(null);
     } else {
-      navigate("/trivia/results", { state: { answers } });
+      navigate("/ACES-MHS/trivia-result", { state: { answers } });
     }
   };
 
@@ -179,6 +179,7 @@ const TriviaPage = () => {
                   checked={selectedAnswer === option}
                   onChange={() => handleAnswer(option)}
                   className={`
+                    hover:bg-slate-200
                   appearance-none
                   w-6 h-6
                   border-2 
@@ -224,14 +225,14 @@ const TriviaPage = () => {
             <button
               onClick={handlePrevious}
               disabled={currentQuestionIndex === 0}
-              className='btn px-8 py-1 text-[#525659] bg-white rounded-md shadow-md m-2'
+              className='btn px-8 py-1 text-[#525659] bg-white rounded-md shadow-md m-2 hover:text-black'
             >
               Previous
             </button>
 
             <button
               onClick={handleNext}
-              className='btn px-8 py-1 bg-black text-[#CFCFCF] border-none rounded-md shadow-md m-2'
+              className='btn px-8 py-1 bg-black text-[#CFCFCF] border-none rounded-md shadow-md m-2 hover:text-white'
             >
               {currentQuestionIndex < questions.length - 1 ? "Next" : "Submit"}
             </button>
