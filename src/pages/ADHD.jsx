@@ -155,7 +155,7 @@ const ADHD = () => {
           ))}
         </div>
 
-        <div className="w-9/12 mb-6">
+        <div className="w-9/12 h-fit mb-6">
           <button
             onClick={() => setIsKnowledgeBoardOpen(!isKnowledgeBoardOpen)}
             className="w-full bg-blue-600 text-white rounded-t-3xl p-4 flex items-center justify-between hover:bg-blue-700 transition-colors duration-200"
@@ -173,7 +173,7 @@ const ADHD = () => {
           </button>
           
           <div
-            className={`overflow-hidden transition-all duration-300 ease-in-out ${
+            className={`overflow-y-auto transition-all duration-300 ease-in-out ${
               isKnowledgeBoardOpen ? "max-h-48" : "max-h-0"
             }`}
           >
