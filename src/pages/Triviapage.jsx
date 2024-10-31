@@ -156,7 +156,7 @@ const TriviaPage = () => {
       <div className='text-center mb-8'>
         <h1 className='font-[500] text-2xl'>Mental Health Trivia</h1>
         <p className=''>How well do you understand your mental health?</p>
-        <p className=''>Take these 10 questions to find out.</p>
+        <p className=''>Take these questions to find out.</p>
       </div>
 
       {currentQuestionIndex < questions.length ? (
