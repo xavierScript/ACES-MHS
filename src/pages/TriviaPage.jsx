@@ -179,7 +179,6 @@ const TriviaPage = () => {
                   checked={selectedAnswer === option}
                   onChange={() => handleAnswer(option)}
                   className={`
-                    hover:bg-slate-200
                   appearance-none
                   w-6 h-6
                   border-2 
