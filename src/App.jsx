@@ -12,7 +12,7 @@ import MhtResuAnxiety from "./pages/MhtResuAnxiety";
 import MhtResuBipolar from "./pages/MhtResuBipolar";
 import MhtResuDepression from "./pages/MhtResuDepression";
 import MhtResuPTSD from "./pages/MhtResuPTSD";
-import TriviaPage from './pages/Triviapage';
+import TriviaPage from './pages/TriviaPage';
 
 function App() {
   return (
