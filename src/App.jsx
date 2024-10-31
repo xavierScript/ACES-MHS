@@ -12,6 +12,7 @@ import MhtResuAnxiety from "./pages/MhtResuAnxiety";
 import MhtResuBipolar from "./pages/MhtResuBipolar";
 import MhtResuDepression from "./pages/MhtResuDepression";
 import MhtResuPTSD from "./pages/MhtResuPTSD";
+import TriviaPage from './pages/Triviapage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/ACES-MHS/anxiety" element={<Anxiety />} />
         <Route path="/ACES-MHS/bipolar" element={<Bipolar />} />
         <Route path="/ACES-MHS/depression" element={<Depression />} />
+        <Route path="/ACES-MHS/trivia" element={<TriviaPage />} />
         <Route path="/ACES-MHS/ptsd" element={<PTSD />} />
         <Route path="/ACES-MHS/adhd-result" element={<MhtResult />} />
         <Route path="/ACES-MHS/anxiety-result" element={<MhtResuAnxiety />} />
