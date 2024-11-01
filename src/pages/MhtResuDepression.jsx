@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
-import {Depression_Assessment} from "../data/Depression";
+import { Depression_Assessment } from "../data/Depression";
 
 const DepressionResult = () => {
   const navigate = useNavigate();
@@ -12,12 +12,12 @@ const DepressionResult = () => {
   const { score } = location.state || { score: 0 };
 
   // Interpret the score range for depression assessment
-  
+
   return (
     <>
       <PageNav />
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-6 font-poppins">
-        <h1 className="text-3xl font-bold mb-4">Depression Self-Assessment</h1>
+        <h1 className="text-3xl font-bold mb-4">Mental Health Test</h1>
         <p className="text-lg mb-8 text-center">
           You have completed the depression self-assessment. 🎉
         </p>
