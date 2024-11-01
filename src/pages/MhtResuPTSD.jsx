@@ -9,7 +9,7 @@ import {PTSD_Assessment} from "../data/PTSD";
 const PTSDResult = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { score } = location.state || { score: 40 };
+  const { score } = location.state || { score: 0 };
 
   // Interpret the PTSD score
 
