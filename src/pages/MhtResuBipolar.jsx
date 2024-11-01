@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
+import {Bipolar_Assessment} from "../data/Bipolar";
 
 const BipolarResult = () => {
   const navigate = useNavigate();
@@ -11,17 +12,7 @@ const BipolarResult = () => {
   const { score } = location.state || { score: 0 };
 
   // Interpret the score range for bipolar assessment
-  const getResultMessage = () => {
-    if (score <= 3) {
-      return "Your responses suggest minimal symptoms of bipolar disorder. However, if you have concerns, consider consulting a healthcare provider.";
-    } else if (score <= 6) {
-      return "Your responses indicate mild symptoms that may be associated with bipolar disorder. Monitoring symptoms and consulting a professional could be beneficial.";
-    } else if (score <= 9) {
-      return "You may be experiencing moderate symptoms associated with bipolar disorder. Consider reaching out to a healthcare professional for further evaluation.";
-    } else {
-      return "Your responses suggest symptoms that may be associated with bipolar disorder. It is recommended to consult a mental health professional for assessment.";
-    }
-  };
+  
 
   return (
     <>
@@ -34,7 +25,7 @@ const BipolarResult = () => {
 
         <p className="text-xl mb-2">Comment:</p>
         <div className="text-xl text-center font-bold mb-8">
-          <p>{getResultMessage()}</p>
+          <p>{Bipolar_Assessment(score)}</p>
         </div>
 
         <div className="flex space-x-4">

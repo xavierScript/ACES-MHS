@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
+import {ADHD_Assessment} from "../data/ADHD.js";
 
 const MhtResult = () => {
   const navigate = useNavigate();
@@ -11,19 +12,7 @@ const MhtResult = () => {
   const { score } = location.state || { score: 0 };
 
   // Interpret the score range for ADHD assessment
-  const getResultMessage = () => {
-    if (score <= 5) {
-      return "Your responses suggest that ADHD symptoms are rarely present.";
-    } else if (score <= 10) {
-      return "You may occasionally experience symptoms associated with ADHD.";
-    } else if (score <= 15) {
-      return "Your responses indicate that you sometimes experience symptoms of ADHD. It may be worth exploring further.";
-    } else if (score <= 20) {
-      return "Your responses suggest that you often experience ADHD-related symptoms. Consider discussing this with a professional.";
-    } else {
-      return "You may frequently experience symptoms associated with ADHD. Professional assessment may be beneficial.";
-    }
-  };
+  
 
   return (
     <>
@@ -36,7 +25,7 @@ const MhtResult = () => {
 
         <p className="text-xl mb-2">Comment:</p>
         <div className="text-xl text-center font-bold mb-8">
-          <p>{getResultMessage()}</p>
+          <p>{ADHD_Assessment(score)}</p>
         </div>
 
         <div className="flex space-x-4">

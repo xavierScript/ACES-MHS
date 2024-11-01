@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
+import {Depression_Assessment} from "../data/Depression";
 
 const DepressionResult = () => {
   const navigate = useNavigate();
@@ -11,20 +12,7 @@ const DepressionResult = () => {
   const { score } = location.state || { score: 0 };
 
   // Interpret the score range for depression assessment
-  const getResultMessage = () => {
-    if (score <= 4) {
-      return "Your responses suggest minimal signs of depression. However, if you have any concerns, consider speaking with a healthcare provider.";
-    } else if (score <= 9) {
-      return "Your responses indicate mild symptoms of depression. Monitoring your mood and possibly consulting a professional might be beneficial.";
-    } else if (score <= 14) {
-      return "You may be experiencing moderate symptoms associated with depression. Consider reaching out to a healthcare provider for further evaluation.";
-    } else if (score <= 19) {
-      return "Your responses suggest moderately severe symptoms of depression. It's recommended to consult a mental health professional.";
-    } else {
-      return "Your responses indicate severe symptoms of depression. Seeking immediate help from a mental health professional is strongly advised.";
-    }
-  };
-
+  
   return (
     <>
       <PageNav />
@@ -36,7 +24,7 @@ const DepressionResult = () => {
 
         <p className="text-xl mb-2">Comment:</p>
         <div className="text-xl text-center font-bold mb-8">
-          <p>{getResultMessage()}</p>
+          <p>{Depression_Assessment(score)}</p>
         </div>
 
         <div className="flex space-x-4">
