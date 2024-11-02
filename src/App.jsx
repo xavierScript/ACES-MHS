@@ -14,6 +14,9 @@ import MhtResuDepression from "./pages/MhtResuDepression";
 import MhtResuPTSD from "./pages/MhtResuPTSD";
 import TriviaPage from "./pages/TriviaPage";
 import Results from "./components/Results";
+import TakeTest from "./pages/TakeTest";
+import TakeQuiz from "./pages/TakeQuiz";
+import MHS from "./pages/More/MHS";
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
         <Route path="/ACES-MHS/adhd-result" element={<MhtResult />} />
         <Route path="/ACES-MHS/anxiety-result" element={<MhtResuAnxiety />} />
         <Route path="/ACES-MHS/bipolar-result" element={<MhtResuBipolar />} />
+        <Route path="/ACES-MHS/test" element={<TakeTest/>} />
+        <Route path="/ACES-MHS/quiz" element={<TakeQuiz/>} />
+        <Route path="/ACES-MHS/more/mhs" element={<MHS />} />
         <Route
           path="/ACES-MHS/depression-result"
           element={<MhtResuDepression />}
