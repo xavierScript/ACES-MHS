@@ -43,7 +43,7 @@ function App() {
         <Route path="/ACES-MHS/trivia-result" element={<Results />} />
         <Route path="/ACES-MHS/ptsd-result" element={<MhtResuPTSD />} />
 
-        {/* <Route path="trivia" element={<TriviaPage />} /> */}
+  
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
