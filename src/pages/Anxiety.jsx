@@ -1,6 +1,7 @@
 // ADHD.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { RangedFifty } from "../data/Max50";
 
 import PageNav from "../components/PageNav";
@@ -77,6 +78,7 @@ const Anxiety = () => {
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
+  const [isKnowledgeBoardOpen, setIsKnowledgeBoardOpen] = useState(false);
 
   const currentYear = new Date().getFullYear(); // Get the current year
 
@@ -121,7 +123,7 @@ const Anxiety = () => {
             <button
               key={index}
               onClick={() => handleAnswer(index)}
-              className={`py-2 px-4 rounded-2xl border border-gray-300 ${
+              className={`py-2 px-4 rounded-2xl border border-gray-300 text-sm ${
                 selectedOption === index
                   ? "bg-blue-600 text-white"
                   : "bg-white text-black hover:bg-gray-100"
@@ -132,20 +134,41 @@ const Anxiety = () => {
           ))}
         </div>
 
-        <div className="bg-blue-600 text-white rounded-3xl p-4 mb-6 w-9/12 flex flex-col items-center justify-center">
-          <div className="bg-blue-800 text-white text-sm inline-flex items-center justify-center px-2 py-1 rounded-full mb-2">
-            Knowledge board
+        <div className="w-9/12 h-fit mb-6">
+          <button
+            onClick={() => setIsKnowledgeBoardOpen(!isKnowledgeBoardOpen)}
+            className="w-full bg-blue-600 text-white rounded-t-3xl p-4 flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
+          >
+            <div className="flex items-center">
+              <div className="bg-blue-800 text-white text-sm inline-flex items-center justify-center px-2 py-1 rounded-full">
+                Knowledge board
+              </div>
+            </div>
+            {isKnowledgeBoardOpen ? (
+              <ChevronUp className="w-5 h-5 justify-end" />
+            ) : (
+              <ChevronDown className="w-5 h-5 justify-end" />
+            )}
+          </button>
+
+          <div
+            className={`overflow-y-auto transition-all duration-300 ease-in-out ${
+              isKnowledgeBoardOpen ? "max-h-48" : "max-h-0"
+            }`}
+          >
+            <div className="bg-blue-600 text-white rounded-b-3xl p-4">
+              <p className="text-center text-sm">
+                Anxiety disorders are a group of mental health conditions
+                characterized by excessive fear or worry that is difficult to
+                control. Common types of anxiety disorders include generalized
+                anxiety disorder (GAD), panic disorder, social anxiety disorder,
+                and specific phobias. Symptoms may include restlessness, rapid
+                heartbeat, sweating, trembling, difficulty concentrating, and
+                avoidance of anxiety-provoking situations. These disorders can
+                interfere with daily activities and quality of life.
+              </p>
+            </div>
           </div>
-          <p className="text-center text-sm">
-            Anxiety disorders are a group of mental health conditions
-            characterized by excessive fear or worry that is difficult to
-            control. Common types of anxiety disorders include generalized
-            anxiety disorder (GAD), panic disorder, social anxiety disorder, and
-            specific phobias. Symptoms may include restlessness, rapid
-            heartbeat, sweating, trembling, difficulty concentrating, and
-            avoidance of anxiety-provoking situations. These disorders can
-            interfere with daily activities and quality of life.
-          </p>
         </div>
 
         <div className="flex space-x-10 mb-32">

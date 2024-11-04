@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
-import {Bipolar_Assessment} from "../data/Bipolar";
+import { Bipolar_Assessment } from "../data/Bipolar";
 
 const BipolarResult = () => {
   const navigate = useNavigate();
@@ -12,13 +12,12 @@ const BipolarResult = () => {
   const { scorerange } = location.state || { scorerange: 0 };
 
   // Interpret the score range for bipolar assessment
-  
 
   return (
     <>
       <PageNav />
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-6 font-poppins">
-        <h1 className="text-3xl font-bold mb-4">Bipolar Self-Assessment</h1>
+        <h1 className="text-3xl font-bold mb-4">Mental Health Test</h1>
         <p className="text-lg mb-8 text-center">
           You have completed the bipolar self-assessment. 🎉
         </p>
