@@ -9,7 +9,7 @@ import {Depression_Assessment} from "../data/Depression";
 const DepressionResult = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { score } = location.state || { score: 0 };
+  const { scorerange } = location.state || { scorerange: 0 };
 
   // Interpret the score range for depression assessment
   
@@ -24,7 +24,7 @@ const DepressionResult = () => {
 
         <p className="text-xl mb-2">Comment:</p>
         <div className="text-xl text-center font-bold mb-8">
-          <p>{Depression_Assessment(score)}</p>
+          <p>{Depression_Assessment(scorerange)}</p>
         </div>
 
         <div className="flex space-x-4">

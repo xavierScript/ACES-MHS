@@ -9,7 +9,7 @@ import {Bipolar_Assessment} from "../data/Bipolar";
 const BipolarResult = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { score } = location.state || { score: 0 };
+  const { scorerange } = location.state || { scorerange: 0 };
 
   // Interpret the score range for bipolar assessment
   
@@ -25,7 +25,7 @@ const BipolarResult = () => {
 
         <p className="text-xl mb-2">Comment:</p>
         <div className="text-xl text-center font-bold mb-8">
-          <p>{Bipolar_Assessment(score)}</p>
+          <p>{Bipolar_Assessment(scorerange)}</p>
         </div>
 
         <div className="flex space-x-4">

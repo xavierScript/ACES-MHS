@@ -1,6 +1,7 @@
 // ADHD.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { RangedFifty } from "../data/Max50";
 
 import PageNav from "../components/PageNav";
 
@@ -122,7 +123,8 @@ const Depression = () => {
       setCurrentQuestion(nextIndex);
       setSelectedOption(null); // Reset selected option for the next question
     } else {
-      navigate("/ACES-MHS/depression-result", { state: { score } });
+      const scorerange = RangedFifty(score, 3, questions.length)
+      navigate("/ACES-MHS/depression-result", { state: { scorerange } });
     }
   };
 

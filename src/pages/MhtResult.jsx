@@ -9,7 +9,7 @@ import {ADHD_Assessment} from "../data/ADHD.js";
 const MhtResult = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { score } = location.state || { score: 0 };
+  const { scorerange } = location.state || { scorerange: 0 };
 
   // Interpret the score range for ADHD assessment
   
@@ -25,7 +25,7 @@ const MhtResult = () => {
 
         <p className="text-xl mb-2">Comment:</p>
         <div className="text-xl text-center font-bold mb-8">
-          <p>{ADHD_Assessment(score)}</p>
+          <p>{ADHD_Assessment(scorerange)}</p>
         </div>
 
         <div className="flex space-x-4">

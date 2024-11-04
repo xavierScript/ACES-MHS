@@ -9,7 +9,7 @@ import {PTSD_Assessment} from "../data/PTSD";
 const PTSDResult = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { score } = location.state || { score: 0 };
+  const { scorerange } = location.state || { scorerange: 0 };
 
   // Interpret the PTSD score
 
@@ -24,7 +24,7 @@ const PTSDResult = () => {
 
         <p className="text-xl mb-2">Comment:</p>
         <div className="text-xl text-center font-bold mb-8">
-          <p>{PTSD_Assessment(score)}</p>
+          <p>{PTSD_Assessment(scorerange)}</p>
         </div>
 
         <div className="flex space-x-4">

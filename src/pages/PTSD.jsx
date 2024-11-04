@@ -1,6 +1,7 @@
 // ADHD.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { RangedFifty } from "../data/Max50";
 
 import PageNav from "../components/PageNav";
 
@@ -51,7 +52,8 @@ const PTSD = () => {
       setCurrentQuestion(nextIndex);
       setSelectedOption(null); // Reset selected option for the next question
     } else {
-      navigate("/ACES-MHS/ptsd-result", { state: { score } });
+      const scorerange = RangedFifty(score, 1, questions.length)
+      navigate("/ACES-MHS/ptsd-result", { state: { scorerange } });
     }
   };
 

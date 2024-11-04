@@ -3,63 +3,64 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import PageNav from "../components/PageNav";
+import { RangedFifty } from "../data/Max50";
 
 // Questions for Bipolar assessment
 const questions = [
   {
     question:
       "You felt so good or hyper that other people thought you were not your normal self or were so hyper that you got into trouble?",
-    options: ["Yes", "No"],
+    options: ["No", "Yes"],
   },
   {
     question:
       "You were so irritable that you shouted at people or started fights or arguments?",
-    options: ["Yes", "No"],
+    options: ["No", "Yes"],
   },
   {
     question: "You felt much more self-confident than usual?",
-    options: ["Yes", "No"],
+    options: ["No", "Yes"],
   },
   {
     question:
       "You got much less sleep than usual and found you didn’t really miss it?",
-    options: ["Yes", "No"],
+      options: ["No", "Yes"],
   },
   {
     question: "You were much more talkative or spoke much faster than usual?",
-    options: ["Yes", "No"],
+    options: ["No", "Yes"],
   },
   {
     question:
       "Thoughts raced through your head or you couldn’t slow your mind down?",
-    options: ["Yes", "No"],
+    options: ["No", "Yes"],
   },
   {
     question:
       "You were so easily distracted by things around you that you had trouble concentrating or staying on track?",
-    options: ["Yes", "No"],
+    options: ["No", "Yes"],
   },
   {
     question: "You had much more energy than usual?",
-    options: ["Yes", "No"],
+    options: ["No", "Yes"],
   },
   {
     question:
       "You were much more social or outgoing than usual, for example, you telephoned friends in the middle of the night?",
-    options: ["Yes", "No"],
+    options: ["No", "Yes"],
   },
   {
     question: "You were much more interested in sex than usual?",
-    options: ["Yes", "No"],
+    options: ["No", "Yes"],
   },
   {
     question:
       "You did things that were unusual for you or that other people might have thought were excessive, foolish, or risky?",
-    options: ["Yes", "No"],
+     options: ["No", "Yes"],
   },
   {
     question: "Spending money got you or your family into trouble?",
-    options: ["Yes", "No"],
+    options: ["No", "Yes"],
   },
 ];
 
@@ -82,7 +83,8 @@ const Bipolar = () => {
       setCurrentQuestion(nextIndex);
       setSelectedOption(null); // Reset selected option for the next question
     } else {
-      navigate("/ACES-MHS/bipolar-result", { state: { score } });
+      const scorerange = RangedFifty(score, 1, questions.length)
+      navigate("/ACES-MHS/bipolar-result", { state: { scorerange } });
     }
   };
 

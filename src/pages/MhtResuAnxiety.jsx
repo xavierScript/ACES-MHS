@@ -9,7 +9,7 @@ import {Anxiety_Assessment} from "../data/Anxiety";
 const AnxietyResult = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { score } = location.state || { score: 0 };
+  const { scorerange } = location.state || { scorerange: 0 };
 
   // Interpret the score range for anxiety assessment
 
@@ -25,7 +25,7 @@ const AnxietyResult = () => {
 
         <p className="text-xl mb-2">Comment:</p>
         <div className="text-xl text-center font-bold mb-8">
-          <p>{Anxiety_Assessment(score)}</p>
+          <p>{Anxiety_Assessment(scorerange)}</p>
         </div>
 
         <div className="flex space-x-4">
